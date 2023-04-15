@@ -1,0 +1,102 @@
+:root {
+    --bg: #f7f5f3;
+    --color: #1d201f;
+    --bg2: #0e1b4d;
+    --color2: #ffffffbf;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+html,
+body,
+.container {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--color);
+}
+
+a:active,
+a:hover {
+    text-decoration: underline;
+}
+
+a {
+    font-size: .8em;
+    text-decoration: none;
+    color: var(--color2);
+}
+
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+}
+
+.top {
+    flex: 1 0 auto;
+}
+
+nav,
+footer {
+    flex: 0 0 auto;
+}
+
+nav {
+    background-color: var(--bg2);
+    padding: .5em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+}
+
+main {
+    flex-direction: column;
+    padding: 1em;
+}
+
+footer {
+    flex-direction: column;
+    background-color: var(--bg2);
+    padding: .5em 0 1em;
+    color: var(--color2);
+}
+
+@media screen and (min-width: 768px) {
+
+    body {
+        font-size: 20px;
+    }
+
+    .top {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        padding:5em 0 0 1em;
+    }
+
+    footer {
+        background-color: #08102f;
+    }
+}
